@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"go.mau.fi/whatsmeow"
-	waProto "go.mau.fi/whatsmeow/binary/proto"
+	"go.mau.fi/whatsmeow/binary/proto"
 	"go.mau.fi/whatsmeow/types/events"
 )
 
@@ -32,7 +32,9 @@ func HandleMessage(messageEvent *events.Message) {
 		return
 	}
 
-	msg := &waProto.Message{
+	println(response)
+
+	msg := &proto.Message{
 		Conversation: &response,
 	}
 

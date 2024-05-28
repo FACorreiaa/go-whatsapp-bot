@@ -22,8 +22,6 @@ func main() {
 		panic(err)
 	}
 
-	wac.AddEventHandler(api.HandleEvent)
-
 	// Listen to Ctrl+C (you can also do something else that prevents the program from exiting)
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
